@@ -1,0 +1,46 @@
+<ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">UI with Angular JS</div>
+</ons-toolbar>
+<br />
+
+<h4>AngularJS Sample Application</h4>
+<!-- TODO: Please edit here -->
+<div ng-controller="myCtrl">
+    <button ng-click="count = count + 1">Click me!</button>
+    <p>{{ count }}</p>
+</div>
+
+<div ng-controller="studentController">
+    Enter first name: <input type="text" ng-model="student.firstName"><br><br>
+    Enter last name: <input type="text" ng-model="student.lastName"><br>
+    <br>
+
+    You are entering: {{student.fullName()}}
+</div>
+
+<script>
+
+        ons.ready(function () {
+             var mainApp = angular.module("myApp", []);
+             mainApp.controller('studentController', function($scope) {
+                $scope.student = {
+                   firstName: "Mahesh",
+                   lastName: "Parashar",
+                   fullName: function() {
+                      var studentObject;
+                      studentObject = $scope.student;
+                      return studentObject.firstName + " " + studentObject.lastName;
+                   }
+                };
+             });
+
+
+           // var app = angular.module('myApp', []);
+            mainApp.controller('myCtrl', function($scope) {
+                $scope.count = 0;
+            });
+
+
+        });
+</script>

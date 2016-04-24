@@ -1,0 +1,23 @@
+﻿<ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">UI with Angular JS</div>
+</ons-toolbar>
+
+<div style="text-align: center">
+
+    <h5>Onsen UI with Angular JS</h5>
+    <ons-button id="btnClick">
+        Button
+    </ons-button>
+
+</div>
+
+<script>
+    ons.ready(function () {
+        // Init code here
+        $("btnClick").click(function () {
+            console.log("Clicked");
+            alert("The Button is clicked.");
+        });
+    });
+</script>

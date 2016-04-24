@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="components/monaca-onsenui/css/onsenui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="components/monaca-onsenui/css/onsen-css-components.css" />
+    <script src="components/loader.js"></script>
+    <script src="components/monaca-onsenui/js/angular/angular.min.js"></script>
+    <script src="components/monaca-onsenui/js/onsenui.js"></script>
+    <script src="components/monaca-onsenui/js/app.js"></script>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script> -->
+    <script>
+       //var module= ons.bootstrap();        
+        
+        /*module.controller('BookController', ['$scope', '$http', function ($scope, $http) {    
+            $scope.testclick=function(){               
+                $http.get("https://whispering-woodland-9020.herokuapp.com/getAllBooks")
+                    .success(function(data, status) {                    
+                        $scope.data = data;                            
+                    });
+                }                        
+        }]); */
+        
+        
+       
+        
+                
+    module.controller('FSController', ['$scope', '$http', function ($scope, $http) {    
+        $scope.getFutsalList=function(){ 
+             
+           // $http.get("http://www.futsalsansar.com/webservice/Futsal/futsals?id=7") 
+           //$http.get("https://whispering-woodland-9020.herokuapp.com/getAllBooks")
+            $http.get("http://www.futsalsansar.com/Api/getFeaturedFutsalList")  
+                .success(function(data) {                    
+                    $scope.data = data;    
+                   alert(data);
+                }); 
+                
+          /*  $http.get("http://www.futsalsansar.com/webservice/Futsal/futsals")
+            .then(function(response) { 
+                alert("asdf");
+                $scope.data = response.data; 
+                alert(response.data);
+            });     */                                 
+        }
+    }]);
+        
+    </script>
+</head>
+<body>
+        <ons-navigator var="myNavigator" page="page1.html">
+          <!--  <ons-page ng-controller="PageController"> 
+            </ons-page>  -->
+        </ons-navigator>
+
+</body>
+</html>

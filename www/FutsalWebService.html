@@ -1,0 +1,76 @@
+<ons-page ng-controller="FSController">
+
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">Futsal List - Web Service </div>
+    </ons-toolbar>
+    
+    <div style="text-align: center">
+    
+        <h5>Futsal List with Angular JS</h5>
+        <ons-button id="btnClick" ng-click="getFutsalList()">
+            Button
+        </ons-button>
+        
+        <div>      
+            <p ng-repeat="f in data"> {{f.Name}} </p>    
+        </div> 
+    
+    </div>
+</ons-page>
+        
+<!--  <ons-list>
+
+    <ons-list-item modifier="chevron" class="list-item-container">
+      <ons-row>
+        <ons-col width="85px">
+          <img src="images/logos/adarsha_futsal_arena_logo.png" class="thumbnail">
+        </ons-col>
+        <ons-col>
+          <div class="name">
+            Adarsha Futsal Arena
+          </div>
+          <div class="location">
+            <i class="fa fa-map-marker"></i>Kathmandu, Nepal
+          </div>
+          <div class="desc">
+            Contact: 01-5523498
+          </div>
+        </ons-col>
+        <ons-col width="30px"></ons-col>
+      </ons-row>
+    </ons-list-item>
+  </ons-list> 
+
+</ons-page>
+
+<style>
+.list-item-container {
+  line-height: 1;
+  padding: 15px 0px 15px 15px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+}
+
+.name {
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.location {
+  font-size: 12px;
+  opacity: 0.4;
+  margin-bottom: 6px;
+}
+
+.desc {
+  line-height: 1.2;
+  font-size: 12px;
+}
+</style>-->

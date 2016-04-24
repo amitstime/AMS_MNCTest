@@ -1,0 +1,74 @@
+<ons-page ng-controller="BookController">
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">Web Service JS</div>
+    </ons-toolbar>
+    
+    <div style="text-align: center">
+        <h5>Web Service with Angular JS</h5>
+        <ons-button id="btnClick" ng-click="testclick()">
+            Button
+        </ons-button>
+    </div>
+        
+    <div style="text-align: center" ng-repeat="book in data.books" class="list-item-container">   
+        <div class="leftblock">
+            <img src="{{book.url}}" class="thumbnail" width="100px">
+        <div>
+        <div class="leftblock">
+            <p class="name"> {{book.name}} </p>
+            <p class="desc"> {{book.url}} </p>          
+        </div>            
+    </div>     
+    
+    
+</ons-page>
+
+<style>
+
+
+.list-item-container {
+  line-height: 1;
+  padding: 15px 0px 15px 15px;
+}
+
+.thumbnail { 
+  border-radius: 4px;
+  
+}
+
+.name {
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.location {
+  font-size: 12px;
+  opacity: 0.4;
+  margin-bottom: 6px;
+}
+
+.desc {
+  line-height: 1.2;
+  font-size: 12px;
+}
+
+    .leftblock
+    {        
+        
+    }
+    
+    .rightblock
+    {        
+        
+    }
+    .clearfloat
+    {
+        clear:both;
+    }
+    
+    
+
+</style>

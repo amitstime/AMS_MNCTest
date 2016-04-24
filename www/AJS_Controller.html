@@ -1,0 +1,33 @@
+﻿<ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">UI with Angular JS</div>
+</ons-toolbar>
+<br />
+<div style="text-align: center">
+    <label>Name:</label>
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <h5>Hello {{yourName}}!</h5>
+</div>
+
+<hr />
+<div ng-controller="SpicyController">
+    <input ng-model="customSpice">
+    <button ng-click="spicy('chili')">Chili</button>
+    <button ng-click="spicy('customSpice')">Custom spice</button>
+    <p>The food is {{spice}} spicy!</p>
+</div>
+
+<script>
+    ons.ready(function () {
+        var myApp = angular.module('myApp', []);
+        myApp.controller('SpicyController', ['$scope', function ($scope) {
+            $scope.customSpice = "wasabi";
+            $scope.spice = 'very';
+            $scope.spicy = function (spice) {
+                $scope.spice = spice;
+            };
+        }]);
+    });
+</script>
+
+

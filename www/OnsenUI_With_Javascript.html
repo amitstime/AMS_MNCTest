@@ -1,0 +1,21 @@
+﻿<ons-toolbar>
+    <div class="left"><ons-back-button>Back</ons-back-button></div>
+    <div class="center">UI with Javascript</div>
+</ons-toolbar>
+
+<div style="text-align: center">
+    <h5>Onsen UI with Plain Javascript</h5>
+    <ons-button onclick="myNavigator.pushPage('page2.html')">Next Page</ons-button>
+    <div id="my-content"></div>
+</div>
+  
+
+<script>
+  ons.bootstrap();
+  ons.ready(function() {
+    // Add another Onsen UI element
+    var content = document.getElementById("my-content");
+    content.innerHTML="<ons-button>Another Button</ons-button>";
+    ons.compile(content);
+  });
+</script>
